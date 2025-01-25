@@ -10,6 +10,9 @@ const homeKitchenData = [
     { url: "../assets/pizza7.jpg", alt: "Delicious Home made Pizza 7", title: "Home made Pizza", price: "₹155", discount: "30%" },
     { url: "../assets/pizza8.jpg", alt: "Delicious Home made Pizza 8", title: "Home made Pizza", price: "₹165" },
     { url: "../assets/pizza9.jpg", alt: "Delicious Home made Pizza 9", title: "Home made Pizza", price: "₹195", discount: "30%" },
+    { url: "../assets/pizza5.jpg", alt: "Delicious Home made Pizza 8", title: "Home made Pizza", price: "₹165" },
+    { url: "../assets/pizza2.jpg", alt: "Delicious Home made Pizza 8", title: "Home made Pizza", price: "₹165" },
+    { url: "../assets/pizza1.jpg", alt: "Delicious Home made Pizza 9", title: "Home made Pizza", price: "₹195", discount: "30%" },
 ];
 
 export { navLinks, homeKitchenData }; 
