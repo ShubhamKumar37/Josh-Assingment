@@ -153,6 +153,7 @@ body {
         font-size: 14px;
     }
 }
+
 @media (max-width: 768px) {
     .hero-content {
         flex-direction: column;
@@ -177,6 +178,9 @@ body {
         display: none;
     }
 
+}
+
+@media (max-width: 670px) {
     .nav-links {
         display: none;
     }
