@@ -74,7 +74,7 @@
         <!-- Popular Item slider  -->
         <section class="carousel-container">
             <div>
-                <h2 class="section-title">Popular Items</h2>
+                <h2 class="section-title popular-item">Popular Items</h2>
                 <div class="slick-carousel" id="home-kitchen-carousel">
                     <!-- Cards will be dynamically inserted here -->
                 </div>
@@ -87,6 +87,10 @@
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
+
+            </div>
+            <div class="request-dish">
+                <button class="request-dish-btn">Request Dish</button>
             </div>
         </section>
 
@@ -157,12 +161,26 @@
             <hr class="footer-divider">
         </footer>
 
+        <!-- Modal -->
+        <div id="requestDishModal" class="modal hidden">
+            <div class="modal-content">
+                <div>
+                    <i class="fas fa-shopping-bag modal-icon"></i>
+                    <h3>Cart is Empty</h3>
+                    <p>Add some items to the cart to checkout</p>
+                    <button id="backToMenuBtn" class="back-to-menu-btn">Back to Menu</button>
+                </div>
+            </div>
+        </div>
+        
+
 
     </div>
 </body>
 <script src="./js/main.js" type="module"></script>
 <script src="./js/card.js" type="module"></script>
 <script src="./js/video.js" type="module"></script>
+<script src="./js/modal.js" type="module"></script>
 
 <script>
     document.getElementById("contactForm").addEventListener("submit", function (e) {

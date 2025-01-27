@@ -185,3 +185,160 @@ body {
         display: none;
     }
 }
+
+
+.no-scroll {
+    overflow: hidden;
+}
+/* Modal Background */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    /* Vertically center */
+    justify-content: center;
+    /* Horizontally center */
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Modal is visible */
+.modal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 800px;
+    height: 500px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Horizontally center content inside */
+    justify-content: center;
+    /* Vertically center content inside */
+}
+
+/* Modal Icon */
+.modal-icon {
+    font-size: 200px;
+    /* Default size for desktop */
+    color: #e0e0e0a2;
+    margin-bottom: 20px;
+}
+
+/* Modal Title */
+.modal h3 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Modal Text */
+.modal p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Back to Menu Button */
+.back-to-menu-btn {
+    background: #28a745;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.back-to-menu-btn:hover {
+    background: #218838;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 900px) {
+
+    /* Adjust the modal content padding and height for smaller screens */
+    .modal-content {
+        padding: 30px 15px;
+        height: auto;
+        /* Allow modal to resize based on content */
+        max-width: 600px;
+    }
+
+    /* Adjust icon size based on screen size */
+    .modal-icon {
+        font-size: 150px;
+        /* Smaller icon for medium screens */
+    }
+
+    /* Adjust modal title size for smaller screens */
+    .modal h3 {
+        font-size: 22px;
+    }
+
+    /* Adjust modal text size for smaller screens */
+    .modal p {
+        font-size: 14px;
+    }
+
+    /* Adjust button size */
+    .back-to-menu-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Media Query for very small screens (e.g., mobile phones) */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    /* Further reduce the icon size on mobile */
+    .modal-icon {
+        font-size: 120px;
+        /* Smaller icon for small screens */
+    }
+
+    /* Further adjust the title and text size */
+    .modal h3 {
+        font-size: 20px;
+    }
+
+    .modal p {
+        font-size: 12px;
+    }
+
+    .back-to-menu-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
