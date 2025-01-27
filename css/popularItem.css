@@ -1,0 +1,170 @@
+/* General carousel container */
+.carousel-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+.carousel-container div {
+    width: 90%;
+    margin: 0 auto;
+    display: relative;
+}
+
+/* Slick carousel items (adjusting gap between items) */
+.slick-carousel {
+    justify-content: center;
+}
+
+/* Custom navigation buttons */
+.carousel-navigation {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-nav-button {
+    background-color: #e0f7e6;
+    border: 1px solid #28a745;
+    border-radius: 50%;
+    color: #28a745;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.prev-button {
+    margin-left: -20px;
+}
+
+.next-button {
+    margin-right: -20px;
+}
+
+/* Slick carousel card styles */
+.carousel-card {
+    width: 100%;
+    max-width: 277px;
+    height: fit-content;
+    /* border: 1px solid #ddd; */
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    display: flex 1;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on card */
+.carousel-card:hover {
+    transform: translateY(-5px);
+}
+
+.carousel-card-image {
+    height: 150px;
+    /* Reduce the height for the image container */
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+    display: relative;
+}
+
+.carousel-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Discount badge styles */
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--accent-yellow);
+    color: #000000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Card content styles */
+.carousel-card-content {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.carousel-card-title {
+    font-size: 16px;
+    /* Slightly smaller font size */
+    color: #333;
+    margin: 5px 0;
+}
+
+.carousel-card-price {
+    font-size: 14px;
+    /* Smaller price text */
+    color: #28a745;
+    margin: 5px 0;
+}
+
+.carousel-card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    /* Smaller font size */
+    color: #666;
+}
+
+.carousel-card-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.carousel-card-add i {
+    background-color: #ffc107;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slick-prev,
+.slick-next {
+    display: none;
+}
+
+.slick-dots {
+    bottom: -30px;
+}
+
+.slick-dots li button:before {
+    color: #28a745;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .carousel-card {
+        width: 90%;
+        max-width: 220px;
+        /* Make it a bit smaller on mobile */
+    }
+
+    .slick-carousel {
+        gap: 20px;
+    }
+}
