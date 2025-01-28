@@ -24,7 +24,7 @@
 
 .card {
     width: 100%;
-    max-width: 277px;
+    /* max-width: 277px; */
     height: 342px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -156,6 +156,6 @@
     }
 
     .card {
-        width: 100%;
+        width: 80%;
     }
 }

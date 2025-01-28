@@ -28,9 +28,12 @@
 }
 
 .text-content p {
-    font-size: 16px;
+    font-size: 14px;
     color: #4a5568;
+    margin: 0 auto;
     margin-bottom: 20px;
+    width: 80%;
+    font-weight: 500;
 }
  
 .video-wrapper {

@@ -72,6 +72,21 @@ body {
     cursor: pointer;
 }
 
+.cart-icon {
+    position: relative;
+}
+
+.notification-dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-yellow);
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
 /* Main Hero Content */
 .hero-content {
     display: flex;
@@ -337,7 +352,7 @@ body {
     }
 
     .hamburger-menu {
-        display: inline-block; 
+        display: inline-block;
     }
 
     .nav-modal {
