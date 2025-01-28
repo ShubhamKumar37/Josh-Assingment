@@ -186,12 +186,13 @@ body {
     }
 }
 
-
+/* Prevent background scrolling when modal is open */
 .no-scroll {
     overflow: hidden;
 }
+
 /* Modal Background */
-.modal {
+.cart-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -210,21 +211,13 @@ body {
 }
 
 /* Modal is visible */
-.modal.visible {
+.cart-modal.visible {
     opacity: 1;
     visibility: visible;
 }
 
-.modal-content div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
 /* Modal Content */
-.modal-content {
+.cart-modal-content {
     background: #ffffff;
     border-radius: 10px;
     padding: 40px 20px;
@@ -243,7 +236,7 @@ body {
 }
 
 /* Modal Icon */
-.modal-icon {
+.cart-modal-icon {
     font-size: 200px;
     /* Default size for desktop */
     color: #e0e0e0a2;
@@ -251,7 +244,7 @@ body {
 }
 
 /* Modal Title */
-.modal h3 {
+.cart-modal h3 {
     font-family: 'Rubik', sans-serif;
     font-size: 24px;
     margin-bottom: 10px;
@@ -259,14 +252,14 @@ body {
 }
 
 /* Modal Text */
-.modal p {
+.cart-modal p {
     font-size: 16px;
     color: #666;
     margin-bottom: 20px;
 }
 
-/* Back to Menu Button */
-.back-to-menu-btn {
+/* Close Cart Button */
+.close-cart-btn {
     background: #28a745;
     color: #ffffff;
     border: none;
@@ -277,68 +270,174 @@ body {
     transition: background 0.3s ease;
 }
 
-.back-to-menu-btn:hover {
+.close-cart-btn:hover {
     background: #218838;
 }
 
 /* Media Query for smaller screens */
 @media (max-width: 900px) {
-
-    /* Adjust the modal content padding and height for smaller screens */
-    .modal-content {
+    .cart-modal-content {
         padding: 30px 15px;
         height: auto;
         /* Allow modal to resize based on content */
         max-width: 600px;
     }
 
-    /* Adjust icon size based on screen size */
-    .modal-icon {
+    .cart-modal-icon {
         font-size: 150px;
         /* Smaller icon for medium screens */
     }
 
-    /* Adjust modal title size for smaller screens */
-    .modal h3 {
+    .cart-modal h3 {
         font-size: 22px;
     }
 
-    /* Adjust modal text size for smaller screens */
-    .modal p {
+    .cart-modal p {
         font-size: 14px;
     }
 
-    /* Adjust button size */
-    .back-to-menu-btn {
+    .close-cart-btn {
         padding: 8px 16px;
         font-size: 14px;
     }
 }
 
-/* Media Query for very small screens (e.g., mobile phones) */
 @media (max-width: 600px) {
-    .modal-content {
+    .cart-modal-content {
         padding: 20px;
         max-width: 90%;
     }
 
-    /* Further reduce the icon size on mobile */
-    .modal-icon {
+    .cart-modal-icon {
         font-size: 120px;
         /* Smaller icon for small screens */
     }
 
-    /* Further adjust the title and text size */
-    .modal h3 {
+    .cart-modal h3 {
         font-size: 20px;
     }
 
-    .modal p {
+    .cart-modal p {
         font-size: 12px;
     }
 
-    .back-to-menu-btn {
+    .close-cart-btn {
         padding: 6px 12px;
         font-size: 12px;
     }
+}
+
+/* Common styles for search and cart buttons */
+.nav-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Styles for the navigation modal */
+/* Styles for the navigation modal */
+@media (max-width: 670px) {
+    .nav-links {
+        display: none;
+        /* Hide on small screens */
+    }
+
+    .hamburger-menu {
+        display: inline-block;
+        /* Show hamburger icon on small screens */
+    }
+
+    .nav-modal {
+        display: none;
+        /* Modal should be hidden by default */
+    }
+
+    .nav-modal.visible {
+        display: flex;
+        /* Show the modal when it's visible */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .cart-modal {
+        z-index: 1010;
+        /* Ensure cart modal is above the navigation modal */
+    }
+}
+
+/* Styles for the navigation modal */
+.nav-modal-content {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Back Button inside the modal */
+.back-button {
+    margin-top: 20px;
+    background-color: var(--primary-green);
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #218838;
+}
+
+/* Modal background */
+.nav-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-modal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Links */
+.nav-modal-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-modal-links li {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.nav-modal-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-modal-links li a:hover {
+    color: var(--primary-green);
 }

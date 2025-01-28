@@ -16,6 +16,7 @@
     <link href="./css/contactForm.css" rel="stylesheet">
     <link href="./css/videoSection.css" rel="stylesheet">
     <link href="./css/popularItem.css" rel="stylesheet">
+    <link href="./css/modal.css" rel="stylesheet">
     <!-- jQuery must be loaded first -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Then load the Slick Carousel JS -->
@@ -34,11 +35,13 @@
                 <div>
                     <ul class="nav-links">
                     </ul>
+                    
                 </div>
                 <div>
                     <ul class="nav-icons">
                         <li><i class="fas fa-search"></i></li>
                         <li><i class="fas fa-shopping-cart"></i></li>
+                        <li class="hamburger-menu"><i class="fas fa-bars"></i></li>
                     </ul>
                 </div>
             </nav>
@@ -161,20 +164,44 @@
             <hr class="footer-divider">
         </footer>
 
-        <!-- Modal -->
-        <div id="requestDishModal" class="modal hidden">
-            <div class="modal-content">
+        <!-- Cart Modal -->
+        <div id="cartModal" class="cart-modal hidden">
+            <div class="cart-modal-content">
                 <div>
-                    <i class="fas fa-shopping-bag modal-icon"></i>
-                    <h3>Cart is Empty</h3>
-                    <p>Add some items to the cart to checkout</p>
-                    <button id="backToMenuBtn" class="back-to-menu-btn">Back to Menu</button>
+                    <i class="fas fa-shopping-bag cart-modal-icon"></i>
+                    <h3>Your Cart is Empty</h3>
+                    <p>Add some items to the cart to proceed to checkout.</p>
+                    <button id="closeCartModalBtn" class="close-cart-btn">Back to Menu</button>
                 </div>
             </div>
         </div>
-        
 
+        <!-- Request Dish Modal -->
+        <div id="requestDishModal" class="cart-modal">
+            <div class="modal-content">
+                <h3>Request a Dish</h3>
+                <form>
+                    <label for="dishName">Name*</label>
+                    <input type="text" id="dishName" placeholder="Enter name of the dish" required />
+                    <label for="dishImage">Upload an image</label>
+                    <input type="text" id="dishImage" placeholder="Paste a URL" />
+                    <div>
+                        <button type="button" class="cancel-btn">Cancel</button>
+                        <button type="submit">Submit Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
+        <!-- Modal for Navigation Links -->
+        <div id="navModal" class="cart-modal hidden">
+            <div class="cart-modal-content nav-modal-content">
+                <ul class="nav-modal-links">
+                    <!-- Navigation Links dynamically rendered -->
+                </ul>
+                <button id="backButton" class="close-cart-btn">Back</button>
+            </div>
+        </div>
     </div>
 </body>
 <script src="./js/main.js" type="module"></script>
