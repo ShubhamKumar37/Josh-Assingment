@@ -108,15 +108,13 @@ body.no-scroll {
     overflow: hidden;
 }
 
-/* Media Queries for Responsive Design */
+
 @media (max-width: 900px) {
     .modal-content {
         width: 90%;
-        /* Decrease modal width on smaller screens */
         padding: 1.5rem;
     }
 
-    /* .modal-content form input,
     /* .modal-content form button {
         width: 100%;
     } */
@@ -137,7 +135,6 @@ body.no-scroll {
 @media (max-width: 600px) {
     .modal-content {
         width: 95%;
-        /* Further reduce modal width for smaller screens */
         padding: 1rem;
     }
 
@@ -148,15 +145,12 @@ body.no-scroll {
 
     .modal-content h3 {
         font-size: 1.3rem;
-        /* Slightly smaller font size */
     }
 
     .modal-content form input,
     .modal-content form button {
         font-size: 0.8rem;
-        /* Smaller font size */
         padding: 0.7rem;
-        /* Reduced padding */
     }
 
     .modal-content form button {
@@ -165,7 +159,6 @@ body.no-scroll {
 
     .modal-content form button:first-child {
         width: 100%;
-        /* Ensure cancel button takes full width */
     }
 
     .cancel-btn {

@@ -7,7 +7,7 @@
     z-index: 6;
 }
 
-.popular-item{
+.popular-item {
     text-align: center;
     margin-bottom: 15px;
 }
@@ -32,14 +32,14 @@
 }
 
 @media (max-width: 900px) {
+
     .slick-slider .slick-track,
     .slick-slider .slick-list {
-        gap: 45px; /* Reduce gap to 45px on smaller screens */
+        gap: 45px;
     }
 }
 
 
-/* Slick carousel items (adjusting gap between items) */
 .slick-carousel {
     width: 76%;
     margin: 0 auto;
@@ -88,7 +88,7 @@
     overflow: hidden;
     display: flex;
     position: relative;
-    /* Ensure relative positioning to allow absolute child positioning */
+    /* relative positioning to allow absolute child */
     text-align: center;
     background: #fff;
     margin: 5px 0;
@@ -96,7 +96,7 @@
     transition: transform 0.3s ease;
 }
 
-/* Hover effect on card */
+
 .carousel-card:hover {
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
@@ -104,7 +104,6 @@
 
 .carousel-card-image {
     height: 150px;
-    /* Reduce the height for the image container */
     width: 100%;
     overflow: hidden;
     border-radius: 10px 10px 0px 0px;
@@ -118,7 +117,6 @@
     object-fit: cover;
 }
 
-/* Discount badge styles */
 .carousel-discount-badge {
     position: absolute;
     width: fit-content;
@@ -131,7 +129,6 @@
     font-size: 12px;
     font-weight: bold;
     display: inline-block;
-    /* Prevent block-level behavior */
 }
 
 /* Card content styles */
@@ -145,14 +142,12 @@
 
 .carousel-card-title {
     font-size: 16px;
-    /* Slightly smaller font size */
     color: #333;
     margin: 5px 0;
 }
 
 .carousel-card-price {
     font-size: 14px;
-    /* Smaller price text */
     color: #000000;
     margin: 5px 0;
 }
@@ -203,15 +198,14 @@
     color: #28a745;
 }
 
-.request-dish
-{
+.request-dish {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 15px;
 }
 
-.request-dish-btn{
+.request-dish-btn {
     padding: 15px 25px;
     background-color: #28a745;
     color: white;
@@ -220,12 +214,10 @@
     cursor: pointer;
 }
 
-/* Mobile responsive styles */
 @media (max-width: 768px) {
     .carousel-card {
         width: 92%;
         max-width: 240px;
-        /* Make it a bit smaller on mobile */
     }
 
     .slick-carousel {

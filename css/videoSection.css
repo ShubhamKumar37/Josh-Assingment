@@ -11,8 +11,7 @@
 .video-container {
     width: 90%;
     max-width: 900px;
-    padding: 3%;
-    /* Set a maximum width */
+    padding: 3%; 
     height: auto;
     display: flex;
     flex-direction: column;
@@ -20,8 +19,7 @@
     text-align: center;
     gap: 20px;
 }
-
-/* Text Content Styling */
+ 
 .text-content h2 {
     font-size: 32px;
     font-weight: bold;
@@ -34,16 +32,14 @@
     color: #4a5568;
     margin-bottom: 20px;
 }
-
-/* Video Wrapper Styling */
+ 
 .video-wrapper {
     position: relative;
     width: 100%;
     height: 80%;
     padding-top: 56.25%;
     /* 16:9 aspect ratio (height is 56.25% of width) */
-    max-width: 1000px;
-    /* Optional: set maximum width for large screens */
+    max-width: 1000px; 
     overflow: hidden;
 }
 
@@ -81,14 +77,12 @@
 .video-control:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
-
-/* Icon Styling */
+ 
 .play-icon,
 .pause-icon {
     color: #28a745;
 }
-
-/* Responsive Styling */
+ 
 @media (max-width: 768px) {
     .video-container {
         width: 90%;
@@ -108,8 +102,7 @@
     }
 
     .video-wrapper {
-        padding-top: 56.25%;
-        /* Maintain 16:9 aspect ratio on smaller screens */
+        padding-top: 56.25%; 
     }
 
     .video-control {
@@ -118,8 +111,7 @@
         font-size: 20px;
     }
 }
-
-/* Additional Media Query for Smaller Devices (Mobile Screens) */
+ 
 @media (max-width: 420px) {
     .video-container {
         width: 90%;
@@ -131,19 +123,16 @@
     }
 
     .text-content h2 {
-        font-size: 20px;
-        /* Smaller heading */
+        font-size: 20px; 
     }
 
     .text-content p {
-        font-size: 12px;
-        /* Smaller paragraph text */
+        font-size: 12px; 
         margin-bottom: 15px;
     }
 
     .video-wrapper {
-        padding-top: 56.25%;
-        /* Maintain aspect ratio but ensure it scales well on smaller screens */
+        padding-top: 56.25%; 
     }
 
     .video-control {

@@ -55,7 +55,7 @@
     transform: scale(1.1);
 }
 
-/* Footer Divider */
+
 .footer-divider {
     margin-top: 20px;
     border: none;
@@ -65,26 +65,21 @@
     width: 100%;
 }
 
-/* Media Query for smaller devices */
+
 @media (max-width: 768px) {
     .footer-container {
         align-items: center;
-        /* Center-align content */
         text-align: center;
-        /* Center text */
     }
 
 
     .footer-social {
         margin-top: 15px;
-        /* Add some space above social icons */
         gap: 10px;
-        /* Reduce gap between icons */
     }
 
     .footer-logo {
         font-size: 20px;
-        /* Reduce logo size */
     }
 
 }
@@ -93,13 +88,11 @@
 
     .footer-logo {
         font-size: 18px;
-        /* Further reduce logo size for very small screens */
     }
 
 
     .social-icon img {
         width: 20px;
-        /* Smaller icons for very small screens */
         height: 20px;
     }
 }

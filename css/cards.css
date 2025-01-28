@@ -17,7 +17,6 @@
 .cards-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* 4 cards per row */
     gap: 25px;
     /* width: 1180px; */
     margin: 0 auto;
